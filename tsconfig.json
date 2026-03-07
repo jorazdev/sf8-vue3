@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./assets/*"
+      ],
+      "@app/*": [
+        "./assets/vue/src/*"
+      ],
+    }
+  }
+}
