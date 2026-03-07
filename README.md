@@ -34,13 +34,17 @@ npm install
 ## Running the app
 
 ```bash
+docker compose up
 symfony serve
 npm run vite
 ```
 
 # lunch application on local
 
+```bash
 http://localhost:8000
+https://sf8-vue3.com:445 (with docker)
+```
 
 ## Support
 
