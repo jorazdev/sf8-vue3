@@ -18,6 +18,18 @@ export default defineConfig({
             '@images': path.resolve(__dirname, './assets/images'),
         },
     },
+    server: {
+        host: "localhost",
+        port: 5173,
+        https: false,
+        cors: {
+            origin: ["http://localhost:5173", "https://sf8-vue3.com:445", "http://127.0.0.1:8000"],
+            credentials: true,
+        },
+        watch: {
+            usePolling: true,
+        }
+    },
     build: {
         outDir: "public/build",
         assetsDir: "assets",

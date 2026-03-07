@@ -1,0 +1,21 @@
+https://sf8-vue3.com {
+# Set this path to your site's directory:
+root * /srv/public
+
+tls /etc/cert/sf8-vue3/sf8-vue3.com+4.pem /etc/cert/sf8-vue3/sf8-vue3.com+4-key.pem
+
+# Enable Gzip compression:
+encode gzip
+
+# Serve PHP files through php-fpm:
+#php_fastcgi unix//run/php/php8.4-fpm.sock
+php_fastcgi php-fpm:9000
+
+# Enable the static file exam:
+file_server
+
+# Enable HTTP request logging
+log {
+output file /var/log/caddy/access.log
+}
+}

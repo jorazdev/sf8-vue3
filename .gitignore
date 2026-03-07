@@ -13,3 +13,6 @@
 /node_modules/
 /public/build/
 ###< pentatrion/vite-bundle ###
+/docker/caddy/sf8-vue3.com+4.pem
+/docker/caddy/sf8-vue3.com+4-key.pem
+/docker/postgresql
