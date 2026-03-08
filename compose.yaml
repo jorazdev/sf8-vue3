@@ -17,6 +17,16 @@ services:
       php-fpm:
         condition: service_started
 
+  node:
+    image: node:20-alpine
+    container_name: node_sf8-vue3
+    working_dir: /srv
+    volumes:
+      - .:/srv
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run vite -- --host"
+
   # ---------------------------
   # PHP-FPM pour Symfony
   # ---------------------------
