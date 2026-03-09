@@ -7,7 +7,7 @@ import sf from '@images/sf.webp'
 </script>
 
 <template>
-  <div>
+  <div class="flex items-center justify-around">
     <a href="https://vite.dev" target="_blank">
       <img :src="vite" class="logo" alt="Vite logo" />
     </a>
@@ -19,6 +19,7 @@ import sf from '@images/sf.webp'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue 3 + Symfony 8" />
+  <h1 class="text-7xl">Tailwind 4</h1>
 </template>
 
 <style scoped>

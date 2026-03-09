@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import symfonyPlugin from "vite-plugin-symfony";
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'node:path'
 
@@ -10,7 +11,8 @@ export default defineConfig({
     plugins: [
         /* react(), // if you're using React */
         symfonyPlugin(),
-        vue()
+        vue(),
+        tailwindcss()
     ],
     resolve: {
         alias: {
