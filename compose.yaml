@@ -5,7 +5,7 @@ services:
     container_name: caddy_sf8-vue3
     restart: unless-stopped
     ports:
-      - "445:443"
+      - "446:443"
     volumes:
       - ./docker/caddy/sf8-vue3.com+4.pem:/etc/cert/sf8-vue3/sf8-vue3.com+4.pem
       - ./docker/caddy/sf8-vue3.com+4-key.pem:/etc/cert/sf8-vue3/sf8-vue3.com+4-key.pem
@@ -24,7 +24,7 @@ services:
     volumes:
       - .:/srv
     ports:
-      - "5173:5173"
+      - "5172:5173"
     command: sh -c "npm install && npm run vite -- --host"
 
   # ---------------------------
@@ -38,7 +38,7 @@ services:
     container_name: php_sf8-vue3
     restart: unless-stopped
     ports:
-      - "9001:9000"
+      - "9002:9000"
     volumes:
       - .:/srv
       - ./docker/php/custom.ini:/usr/local/etc/php/conf.d/custom.ini
@@ -54,7 +54,7 @@ services:
     image: postgres:16-alpine
     restart: always
     ports:
-      - "5430:5432"
+      - "5433:5432"
     environment:
       POSTGRES_PASSWORD: sf8-vue3
       POSTGRES_USER: sf8-vue3
@@ -75,7 +75,7 @@ services:
     image: dpage/pgadmin4:latest
     restart: always
     ports:
-      - "5051:80"
+      - "5052:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: pgadmin4

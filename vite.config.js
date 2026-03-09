@@ -21,12 +21,17 @@ export default defineConfig({
         },
     },
     server: {
-        host: "localhost",
+        host: "0.0.0.0",
         port: 5173,
-        https: false,
+        strictPort: true,
         cors: {
-            origin: ["http://localhost:5173", "https://sf8-vue3.com:445", "http://127.0.0.1:8000"],
+            origin: ["http://localhost:5173", "https://sf8-vue3.com:446", "http://127.0.0.1:8000"],
             credentials: true,
+        },
+        hmr: {
+            host: "sf8-vue3.com",
+            protocol: "wss",
+            clientPort: 446
         },
         watch: {
             usePolling: true,

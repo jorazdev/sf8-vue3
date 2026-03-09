@@ -18,4 +18,8 @@ file_server
 log {
 output file /var/log/caddy/access.log
 }
+
+# Vite dev server
+    reverse_proxy /build/* node:5173
+    reverse_proxy /@vite/* node:5173
 }
